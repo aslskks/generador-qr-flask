@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Código QR Generado</title>
+</head>
+
+<body>
+    <h1>Código QR Generado</h1>
+    <img src="{{ url_for('serve_static', filename=img_filename) }}" alt="Código QR"></img>
+    <p>Nombre del archivo: {{ img_filename }}</p>
+</body>
+
+</html>
