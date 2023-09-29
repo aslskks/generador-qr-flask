@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Generador de Código QR</title>
+    <title>Generador de Códigos QR</title>
 </head>
-
 <body>
-    <h1>Generador de Código QR</h1>
-    <form action="/generate_qr" method="post">
-        <input type="text" name="url" placeholder="Ingresa la URL HTTPS">
-        <input type="text" name="filename" placeholder="Nombre del archivo (sin extensión)">
-        <input type="submit" value="Generar Código QR">
-    </form>
-</body>
+    <h1>Generador de Códigos QR</h1>
 
+    <form method="POST" action="/generate_qr" enctype="multipart/form-data">
+        <label for="data">Datos:</label>
+        <input type="text" name="data" id="data" required>
+        <br><br>
+    
+        <label for="filename">Nombre del archivo:</label>
+        <input type="text" name="filename" id="filename" required>
+        <br><br>
+    
+        <label>Tipo de Dato:</label>
+        <input type="radio" name="data_type" value="url" checked> URL
+        <input type="radio" name="data_type" value="text"> Texto
+        <br><br>
+    
+        <input type="submit" value="Generar QR">
+    </form>
+    
+
+</body>
 </html>
