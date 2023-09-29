@@ -3,6 +3,7 @@ from werkzeug.utils import secure_filename
 import qrcode
 import os
 
+
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static/qrcodes'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
