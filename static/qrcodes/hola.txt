@@ -1,1 +1,0 @@
-este archivo solo sirve para poder meter la carpeta a github

@@ -58,4 +58,11 @@ def serve_static(filename):
     return send_from_directory('static', filename)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    try:
+        app.run(host='0.0.0.0', port=5000, debug=True)
+    except KeyboardInterrupt:
+        import sys
+        sys.exit()
+    except Exception as e:
+        from tkinter import messagebox
+        messagebox.showerror(title="Generador qr con flask", message=f"{e}")
